@@ -10,7 +10,3 @@ const readStream = fs.createReadStream(filePath, { encoding: 'utf-8' });
 readStream.on('data', (data) => {
   stdout.write(data);
 });
-
-readStream.on('error', (error) => {
-  console.error('An error occured:', error.message);
-});
